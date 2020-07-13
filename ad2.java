@@ -16,7 +16,7 @@ public class ad2{
                 break;
                 
                 case 1:
-
+                    //foreach com lista?
                     int n=Integer.parseInt(JOptionPane.showInputDialog("Quantos entrevistados a serem registrados?"));
                     for(int i=0;i<n;i++){
                         
