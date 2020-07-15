@@ -6,10 +6,11 @@ public class Pessoa {
     String escolaridade;
     String idade;
     String orientacao;
+    String emprego;
     String deficiencia = "Não possui";
     int cpf = 0;
 
-    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String deficiencia) {
+    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String deficiencia, String emprego) {
         this.nome = nome;
         this.renda = renda;
         this.etnia = etnia;
@@ -21,7 +22,7 @@ public class Pessoa {
         this.deficiencia = deficiencia;
     }
 
-    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String deficiencia) {
+    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String deficiencia, String emprego) {
         this.nome = nome;
         this.renda = renda;
         this.etnia = etnia;
@@ -32,7 +33,7 @@ public class Pessoa {
         this.deficiencia = deficiencia;
     }
 
-    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf) {
+    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String emprego) {
         this.nome = nome;
         this.renda = renda;
         this.etnia = etnia;
@@ -43,7 +44,7 @@ public class Pessoa {
         this.cpf = cpf;
     }
 
-    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda) {
+    public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String emprego) {
         this.nome = nome;
         this.renda = renda;
         this.etnia = etnia;
