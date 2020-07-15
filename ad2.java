@@ -4,15 +4,18 @@ import javax.swing.*;
 
 public class ad2 {
     //Lista armazenando os registrados
-    public static List<Pessoa> listaDadosList = new ArrayList<Pessoa>();
+    public static List<Pessoa> listaDados = new ArrayList<Pessoa>();
 
     public static void main(String[] args) {
         int op = 0;
         //Menu principal
-        while (op != 2) {
+        while (op != 4) {
             switch (op) {
                 case 0:
-                    op = Integer.parseInt(JOptionPane.showInputDialog("Bem vindo, qual operação desejada? \n 1-Registar um ou mais entrevistados \n 2-Ler dados salvos"));
+                    op = Integer.parseInt(JOptionPane.showInputDialog("Bem vindo, qual operação desejada? \n"
+                    +"1-Registar um ou mais entrevistados \n"
+                    +"2-Ler dados salvos \n"
+                    +"3-Sair"));
                 break;
 
                 case 1:
@@ -21,7 +24,7 @@ public class ad2 {
                 break;
                 
                 case 2:
-                    if(listaDadosList.size()!=0){
+                    if(listaDados.size()!=0){
                         exibe();
                     }else{
                         JOptionPane.showMessageDialog(null, "Erro: Não há registros, retornando ao menu!", "Erro", JOptionPane.ERROR_MESSAGE);                        }
@@ -29,7 +32,7 @@ public class ad2 {
                 break;
 
                 case 3:
-                    op=3;
+                    op=4;
                 break;
 
                 default:
@@ -92,26 +95,26 @@ public class ad2 {
             }
 
             if (possuiCpf && possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, deficienciaSelected.toString(), empregoSelected.toString()));
+                listaDados.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, deficienciaSelected.toString(), empregoSelected.toString()));
 
             } else if (possuiCpf && !possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, empregoSelected.toString()));
+                listaDados.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, empregoSelected.toString()));
 
             } else if (!possuiCpf && possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), deficienciaSelected.toString(), empregoSelected.toString()));
+                listaDados.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), deficienciaSelected.toString(), empregoSelected.toString()));
 
             } else {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), empregoSelected.toString()));
+                listaDados.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), empregoSelected.toString()));
             }
         }
     }
 
     //Metodo para exebir todos os registrados
     public static void exibe() {
-        String toString= "============================";
+        String toString= "============================ \n";
         
-        for (Pessoa pessoa : listaDadosList) {
-           toString+= pessoa.toString() + "___________________________";
+        for (Pessoa pessoa : listaDados) {
+           toString+= pessoa.toString() + "\n___________________________";
         }
 
         JOptionPane.showMessageDialog(null, toString, "Registrados", JOptionPane.INFORMATION_MESSAGE);
