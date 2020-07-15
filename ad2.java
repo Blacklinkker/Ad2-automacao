@@ -41,7 +41,7 @@ public class ad2 {
 
     //Metodo de registro
     public static void registrar() {
-        int n = Integer.parseInt(JOptionPane.showInputDialog("Quantos entrevistados a serem registrados?"));
+        int n = Integer.parseInt(JOptionPane.showInputDialog("Quantos entrevistados a serem registrados: "));
 
         for (int i = 0; i < n; i++) {
             boolean possuiDeficiencia = false;
@@ -64,7 +64,7 @@ public class ad2 {
             String[] etniaValues = { "Branco", "Indígena", "Negro", "Pardo", "Asiático" };
             Object etniaSelected = JOptionPane.showInputDialog(null, "Etnia:", "Selection", JOptionPane.DEFAULT_OPTION, null, etniaValues, "0");
 
-            String[] idadeValues = { "Até 18 anos", "18-25", "26-36", "37-49", "50 ou mais" };
+            String[] idadeValues = { "Até 18 anos", "18-25", "26-36", "37-49", "50-60", "61 ou mais"};
             Object idadeSelected = JOptionPane.showInputDialog(null, "Faixa etária:", "Selection", JOptionPane.DEFAULT_OPTION, null, idadeValues, "0");
 
             String[] escolaridadeValues = { "Não possui escolaridade", "Fundamental incompleto", "Medio incompleto", "Superior incompleto", "Superior completo" };
@@ -79,6 +79,9 @@ public class ad2 {
             String[] rendaValues = { "Não possui", "Até um salário minimo", "1000-1500", "1500-2000", "Mais de 2000" };
             Object rendaSelected = JOptionPane.showInputDialog(null, "Renda estimada:", "Selection", JOptionPane.DEFAULT_OPTION, null, rendaValues, "0");
 
+            String[] empregoValues = { "Não possui", "Emprego fixo", "Não-CLT"};
+            Object empregoSelected = JOptionPane.showInputDialog(null, "Situação laboral: ", "Selection", JOptionPane.DEFAULT_OPTION, null, empregoValues, "0");
+
             x = JOptionPane.showOptionDialog(null, "Possui deficiência?:", "ATENÇÃO", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
             Object deficienciaSelected = null;
 
@@ -89,16 +92,16 @@ public class ad2 {
             }
 
             if (possuiCpf && possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, deficienciaSelected.toString()));
+                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, deficienciaSelected.toString(), empregoSelected.toString()));
 
             } else if (possuiCpf && !possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf));
+                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), cpf, empregoSelected.toString()));
 
             } else if (!possuiCpf && possuiDeficiencia) {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), deficienciaSelected.toString()));
+                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), deficienciaSelected.toString(), empregoSelected.toString()));
 
             } else {
-                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString()));
+                listaDadosList.add(new Pessoa(nome, etniaSelected.toString(), sexoSelected.toString(), escolaridadeSelected.toString(), idadeSelected.toString(), orientacaoSelected.toString(), rendaSelected.toString(), empregoSelected.toString()));
             }
         }
     }
