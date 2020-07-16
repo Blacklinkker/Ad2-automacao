@@ -1,0 +1,88 @@
+PESSOA
+nome: String
+_________________________________________________________________
+renda: String
+_________________________________________________________________
+etnia: String
+_________________________________________________________________
+sexo: String
+_________________________________________________________________
+escolaridade: String
+_________________________________________________________________
+idade: String
+_________________________________________________________________ 
+orientacao: String 
+_________________________________________________________________
+emprego: String 
+_________________________________________________________________
+deficiencia: String 
+_________________________________________________________________
+cpf:int
+_________________________________________________________________
+
+
+Contrutores:
+Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String deficiencia, String emprego)
+__________________________________________________________________________________________________________________________________
+Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String deficiencia, String emprego)
+__________________________________________________________________________________________________________________________________
+Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String emprego)
+__________________________________________________________________________________________________________________________________
+Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String emprego)
+
+getters:
+getNome() String
+_________________________________________________________________
+getCpf() int
+_________________________________________________________________
+getDeficiencia() String
+_________________________________________________________________
+getEscolaridade() String
+_________________________________________________________________
+getEtnia() String
+_________________________________________________________________
+getIdade() String
+_________________________________________________________________
+getOrientacao() String
+_________________________________________________________________
+getRenda() String
+_________________________________________________________________
+getSexo() String
+_________________________________________________________________
+getEmprego() String
+_________________________________________________________________
+
+toString:
+toString() String
+============================================================================================================
+RELATORIOS:
+
+metodos:
+rendaCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+etniaCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+sexoCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+escolaridadeCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+idadeCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+orientacaoCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+empregoCount(String parametroBusca, List<Pessoa> listaDados) String
+_________________________________________________________________
+deficienciaCount(String parametroBusca, List<Pessoa> listaDados) String
+============================================================================================================
+AD2:
+
+List<Pessoa> listaDados
+_________________________________________________________________
+Main(String args)
+_________________________________________________________________
+registrar() void
+_________________________________________________________________
+exibe() void
+_________________________________________________________________
+exibeEstatistica() void
+=====================================================================================================================================
