@@ -86,3 +86,13 @@ exibe() void
 _________________________________________________________________
 exibeEstatistica() void
 =====================================================================================================================================
+
+REQUISITOS FUNCIONAIS:
+registra dados de entrevistados, solicitando informações como nome cpf (se possuir), etnia, faixa de renda, faixa etaria, escolaridade, situação laboral, sexo, orientação sexual e deficiencia (caso possua)
+
+exibe dados de todos os entrevistados (dados armazenados perante aceite de termos de condição de uso do programa)
+
+exibe porcentagens da categoria solicitada, calculando como : (numero de registrados que se enquadra / numero total de registrados)
+REQUISITOS NAO FUNCIONAIS:
+capacidade de registro virtualmente ilimitada
+GUI simples
