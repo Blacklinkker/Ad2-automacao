@@ -19,6 +19,7 @@ public class Pessoa {
         this.idade = idade;
         this.orientacao = orientacao;
         this.cpf = cpf;
+        this.emprego=emprego;
         this.deficiencia = deficiencia;
     }
 
@@ -30,6 +31,7 @@ public class Pessoa {
         this.escolaridade = escolaridade;
         this.idade = idade;
         this.orientacao = orientacao;
+        this.emprego=emprego;
         this.deficiencia = deficiencia;
     }
 
@@ -42,6 +44,7 @@ public class Pessoa {
         this.idade = idade;
         this.orientacao = orientacao;
         this.cpf = cpf;
+        this.emprego=emprego;
     }
 
     public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, String emprego) {
@@ -52,6 +55,7 @@ public class Pessoa {
         this.escolaridade = escolaridade;
         this.idade = idade;
         this.orientacao = orientacao;
+        this.emprego=emprego;
     }
 
     public String getNome() {
@@ -88,6 +92,9 @@ public class Pessoa {
 
     public String getSexo() {
         return sexo;
+    }
+    public String getEmprego() {
+        return emprego;
     }
     
     @Override
