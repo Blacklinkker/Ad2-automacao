@@ -27,21 +27,28 @@ public class ad2 {
                     if(listaDados.size()!=0){
                         exibe();
                     }else{
-                        JOptionPane.showMessageDialog(null, "Erro: Não há registros, retornando ao menu!", "Erro", JOptionPane.ERROR_MESSAGE);                        }
-                        op=0;
+                        JOptionPane.showMessageDialog(null, "Erro: Não há registros, retornando ao menu!", "Erro", JOptionPane.ERROR_MESSAGE);               
+                    }
+                    op=0;
+                        
                 break;
 
                 case 3:
-                    int op2=Integer.parseInt(JOptionPane.showInputDialog("informe estatística desejada: \n"
-                    +"1 - Renda \n"
-                    +"2 - Etnia \n"
-                    +"3 - Sexo \n"
-                    +"4 - Escolaridade \n"
-                    +"5 - Faixa etária \n"
-                    +"6 - Orientação \n"
-                    +"7 - Emprego \n"
-                    +"8 - Deficiência \n"));
-                    exibeEstatistica(op2);
+                    if(listaDados.size() != 0){
+                        int op2=Integer.parseInt(JOptionPane.showInputDialog("informe estatística desejada: \n"
+                        +"1 - Renda \n"
+                        +"2 - Etnia \n"
+                        +"3 - Sexo \n"
+                        +"4 - Escolaridade \n"
+                        +"5 - Faixa etária \n"
+                        +"6 - Orientação \n"
+                        +"7 - Emprego \n"
+                        +"8 - Deficiência \n"));
+                        exibeEstatistica(op2);
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Erro: Não há registros, retornando ao menu!", "Erro", JOptionPane.ERROR_MESSAGE);                        
+                    }
+                    op=0;
                 break;
 
                 case 4:
@@ -81,6 +88,7 @@ public class ad2 {
                 possuiCpf = false;
             }
 
+            //Menus drop-down para selecionar valores, minizando possibilidade de erros por parte do usuário
             String[] rendaValues = { "Não possui", "Até um salário minimo", "1000-1500", "1500-2000", "Mais de 2000" };
             Object rendaSelected = JOptionPane.showInputDialog(null, "Renda estimada:", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, rendaValues, "0");
 
@@ -137,6 +145,7 @@ public class ad2 {
         JOptionPane.showMessageDialog(null, toString, "Registrados", JOptionPane.INFORMATION_MESSAGE);
     }
 
+    //metodo que gera relatorio de estatistica sobre dado selecionado
     public static void exibeEstatistica(int op2){
     
         switch(op2){
