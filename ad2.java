@@ -98,7 +98,7 @@ public class ad2 {
                 Object etniaSelected = JOptionPane.showInputDialog(null, "Etnia:", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, etniaValues, "0");
                 
                 String[] sexoValues = { "Feminino", "Masculino" };
-                Object sexoSelected = JOptionPane.showInputDialog(null, "Grau de escolaridade:", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, sexoValues, "0");
+                Object sexoSelected = JOptionPane.showInputDialog(null, "Sexo:", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, sexoValues, "0");
                 
                 String[] escolaridadeValues = { "Não possui escolaridade", "Fundamental incompleto", "Medio incompleto", "Superior incompleto", "Superior completo" };
                 Object escolaridadeSelected = JOptionPane.showInputDialog(null, "Grau de escolaridade:", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, escolaridadeValues, "0");
