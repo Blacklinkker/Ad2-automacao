@@ -13,9 +13,10 @@ public class ad2 {
             switch (op) {
                 case 0:
                     op = Integer.parseInt(JOptionPane.showInputDialog("Bem vindo, qual operação desejada? \n"
-                    +"1-Registar um ou mais entrevistados \n"
-                    +"2-Ler dados salvos \n"
-                    +"3-Sair"));
+                    +"1 - Registar um ou mais entrevistados \n"
+                    +"2 - Ler dados salvos \n"
+                    +"3 - Estatisticas \n"
+                    +"4 - Sair"));
                 break;
 
                 case 1:
