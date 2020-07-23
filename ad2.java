@@ -111,10 +111,11 @@ public class ad2 {
 
                 String[] empregoValues = { "Não possui", "Emprego fixo", "Não-CLT"};
                 Object empregoSelected = JOptionPane.showInputDialog(null, "Situação laboral: ", "Selecione uma opção", JOptionPane.DEFAULT_OPTION, null, empregoValues, "0");
-
+                
                 x = JOptionPane.showOptionDialog(null, "Possui deficiência?:", "ATENÇÃO", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
                 Object deficienciaSelected = null;
-
+                
+                //verifica se entrevistado possui deficiência/cpf e faz Sort com as possibilidades
                 if (x == 0) {
                     possuiDeficiencia = true;
                     String[] deficiencia = { "Física", "Mental", "Visual", "Auditiva", "Multipla" };
