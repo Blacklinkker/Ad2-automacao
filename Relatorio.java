@@ -1,7 +1,7 @@
 import java.util.List;
 
 public class Relatorio {
-    
+    //Metodos utilizados para as estatisticas
     public static String rendaCount(String parametroBusca, List<Pessoa> listaDados){
         int contador=0;
         for (Pessoa pessoa : listaDados) {
