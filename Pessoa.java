@@ -9,7 +9,8 @@ public class Pessoa {
     String emprego;
     String deficiencia = "Não possui";
     int cpf = 0;
-
+    
+    //construtores pra todos os casos de registro
     public Pessoa(String nome, String etnia, String sexo, String escolaridade, String idade, String orientacao, String renda, int cpf, String deficiencia, String emprego) {
         this.nome = nome;
         this.renda = renda;
